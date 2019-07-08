@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5-Video-Player</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<link href='assignment.css' rel='stylesheet' />
+	<script src="assignment.js"></script>
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="view">
+        <h1>HTML5_Video_Player</h1>
+        <div class="videoPlayer" id="videoContainer">
+            <video id="video" width="900" height="540" preload="auto" controls>
+                <source id="videosource" src="trailer_test.mp4" type='video/mp4' title='example0'>
+            </video>
+            <div id="videoControls"> 
+                <div id="progressWrap">  
+                    <div id="playProgress">  
+                        <span id="showProgress">0</span> 
+                    </div>
+                </div>
+				<button id="btn_play" type="button"><span class="glyphicon glyphicon-play"></span> Play</button>
+				<button id="btn_pause" type="button"><span class="glyphicon glyphicon-pause"></span> Pause</button>
+				<button id="volumeup" type="button"><span class="glyphicon glyphicon-plus-sign"></span> volume up</button>
+				<button id="volumedown" type="button"><span class="glyphicon glyphicon-minus-sign"></span> volume down</button>
+				<span class="glyphicon glyphicon-signal"></span> Volumn:<span id="videovolume" style="color: blue;"></span>
+				<button id="replay" type="button"><span class="glyphicon glyphicon-repeat"></span> replay</button>
+				<button id="muteControl" type="button"><span class="glyphicon glyphicon-headphones"></span> <span id="muteValue" style="color: blue;"></span></button>
+				<button id="like_button" type="button"><span class="glyphicon glyphicon-thumbs-up"></span> like<span id='video-like' style="color: green;"></span></button>
+				<button id="unlike_button" type="button"><span class="glyphicon glyphicon-thumbs-down"></span> unlike<span id='video-unlike' style="color: red;"></span></button>
+				<button id="fullScreenBtn" title="FullScreen Toggle"></button>	
+			</div> 
+			
+        </div>
+		<div id='media-play-list'>
+		<h1>Play list</h1>
+			<ul>
+				<li id="examplevideo0" onclick='loadVideo("trailer_test.mp4","example0");'><u>Example-0</u></li>
+				<li id="examplevideo1" onclick='loadVideo("example.mp4","example1");'><u>Example-1</u></li>
+				<li id="examplevideo2" onclick='loadVideo("example1.mp4","example2");'><u>Example-2</u></li>
+				<li id="examplevideo3" onclick='loadVideo("movie.mp4","example3");'><u>Example-3</u></li>
+				<li id="examplevideo4" onclick='loadVideo("mov_bbb.mp4","example4");'><u>Example-4</u></li>
+			  </ul>
+		</div>
+    </div>
+	<script>
+
+	</script>
+</body>
+</html>

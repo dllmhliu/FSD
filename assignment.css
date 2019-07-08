@@ -1,0 +1,47 @@
+ .videoPlayer{
+	border: 1px solid #000;
+	width: 900px;
+
+	float:left
+}
+#video{
+	margin-top: 0px;
+}
+#videoControls{
+	width: 900px;
+	margin-top: 0px;
+}
+.show{
+	opacity: 1;
+}
+.hide{
+	opacity: 0;
+}
+#progressWrap{
+	background-color: black;
+	height: 25px;
+	cursor: pointer;
+}
+#playProgress{
+	background-color: red;
+	width: 0px;
+	height: 25px;
+	border-right: 2px solid blue;
+}
+#showProgress{
+	background-color: ;
+	font-weight: 900;
+	font-size: 20px;
+	line-height: 25px;
+}
+.media-play-list{
+	float:right;
+}
+ul
+{
+	list-style-type:none;
+}
+li{
+	list-style-type:square;
+	list-style-position:inside;
+}
