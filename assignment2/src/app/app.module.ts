@@ -8,12 +8,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CourseModule } from './course/course.module';
-import { HeaderComponent, SidemenuComponent } from './shared';
+import { HeaderComponent } from './shared';
 import { CoreModule } from './core/core.module';
 import { VideoPlayerModule } from './video-player';
 import { ToastrModule } from 'ngx-toastr';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, SidemenuComponent],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     NgbModule,
     BrowserModule,

@@ -3,50 +3,40 @@
   color: rgb(255, 255, 255);
 }
 .navbar2 {
-  &:hover {
-    outline: 0;
-    background-color: rgb(125, 197, 156, 0.2);
-  }
-  &.active {
-    outline: 0;
-    background-color: rgb(125, 197, 156, 0.1);
-  }
   color: rgb(255, 255, 255);
 }
 .navbar-brand {
-  cursor: pointer;
+  //光标呈现为指示链接的指针(一只手) move 此光标指示某对象可被移动
+  //cursor: pointer;
+  width: 70%;
 }
 
 .menu {
   margin: 0;
-  padding: 0;
+  //padding: 0;
   width: 100%;
-  height: 70px;
+  height: 76px;
   border-right: solid 1px #e6e6e6;
 }
 
 .menu.hide {
-  width: 140px;
+  width: 100%;
   transition: width 0.2s;
 
   .menu-item {
-    padding: 0 100px;
+    //padding: 0 100px;
 
     span {
       display: none;
     }
   }
 }
-
-.menu-item {
-  padding: 0 400px;
-  height: 76px;
-  width: 180px;
+.table-td{
+  text-align:center;
   line-height: 76px;
   font-size: 14px;
   color: #303133;
-  cursor: pointer;
- 
+  //cursor: pointer;
   &:hover {
     outline: 0;
     background-color: rgb(125, 197, 156, 0.2);
@@ -56,6 +46,31 @@
     background-color: rgb(125, 197, 156, 0.1);
   }
   i {
+    margin-right: 0.5rem;
+  }
+}
+.menu-item {
+  text-align:center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  height: 76px;
+  width: 100px;
+  line-height: 76px;
+  font-size: 16px;
+  color: #303133;
+  cursor: pointer;
+  &:hover {
+    outline: 0;
+    background-color: rgb(125, 197, 156, 0.2);
+  }
+  &.active {
+    outline: 0;
+    background-color: rgb(125, 197, 156, 0.1);
+  }
+  i {
+    
     margin-right: 0.5rem;
   }
 }

@@ -18,8 +18,6 @@ export class HeaderComponent implements OnInit {
 }
 @Component({
   selector: 'app-sidemenu',
-  templateUrl: './sidemenu.component.html',
-  styleUrls: ['./sidemenu.component.scss'],
 })
 export class SidemenuComponent implements OnInit {
   @ViewChild('menuRef', { static: true }) menuRef: ElementRef;

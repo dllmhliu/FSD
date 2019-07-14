@@ -5,8 +5,8 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'course', pathMatch: 'full' },
-  { path: 'watch', component: VideoPlayerComponent, pathMatch: 'full' },
-  { path: 'course', component: CourseComponent, pathMatch: 'full' },
+  { path: 'play', component: VideoPlayerComponent, pathMatch: 'full' },
+  { path: 'add', component: CourseComponent, pathMatch: 'full' },
   { path: '**', component: CourseComponent },
 ];
 
