@@ -144,8 +144,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let c of courses; index as i">
-          <th scope="row">{{ i + 1 }}</th>
+        <tr *ngFor="let c of courses; let i = index; trackBy: c ? c.id : null">
+          <th scope="row">{{ c.id+1 }}</th>
           <td class="title">{{ c.title }}</td>
           <td class="url">
             <a [href]="c.url" target="_blank">{{ c.url }}</a>
