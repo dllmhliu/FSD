@@ -1,18 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { AppComponent } from './app.component';
-
+import { AppRoutingModule } from './app-routing.module';
+import { CourseModule } from './course/course.module';
+import { HeaderComponent, SidemenuComponent } from './shared';
+import { CoreModule } from './core/core.module';
+import { VideoPlayerModule } from './video-player';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, HeaderComponent, SidemenuComponent],
   imports: [
+    NgbModule,
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    CoreModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }), // ToastrModule added
+
+    CourseModule,
+    VideoPlayerModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
