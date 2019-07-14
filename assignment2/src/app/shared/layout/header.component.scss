@@ -1,8 +1,61 @@
 .navbar {
   background-color: #2f95b4;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
-
+.navbar2 {
+  &:hover {
+    outline: 0;
+    background-color: rgb(125, 197, 156, 0.2);
+  }
+  &.active {
+    outline: 0;
+    background-color: rgb(125, 197, 156, 0.1);
+  }
+  color: rgb(255, 255, 255);
+}
 .navbar-brand {
   cursor: pointer;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 70px;
+  border-right: solid 1px #e6e6e6;
+}
+
+.menu.hide {
+  width: 140px;
+  transition: width 0.2s;
+
+  .menu-item {
+    padding: 0 100px;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.menu-item {
+  padding: 0 400px;
+  height: 76px;
+  width: 180px;
+  line-height: 76px;
+  font-size: 14px;
+  color: #303133;
+  cursor: pointer;
+ 
+  &:hover {
+    outline: 0;
+    background-color: rgb(125, 197, 156, 0.2);
+  }
+  &.active {
+    outline: 0;
+    background-color: rgb(125, 197, 156, 0.1);
+  }
+  i {
+    margin-right: 0.5rem;
+  }
 }

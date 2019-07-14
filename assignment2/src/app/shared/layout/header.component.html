@@ -3,8 +3,27 @@
     <span class="mr-2">FSD Assignment2</span>
     <i class="fas fa-bars"></i>
   </a>
-  <div>
-    <i class="far fa-user"></i>
-    MeiHuaLiu
-  </div>
+  <p></p>
+</nav>
+<nav class="navbar2 navbar-light">
+  <ul #menuRef role="menubar" class="menu">
+    <a 
+      class="menu-item"
+      [routerLink]="['/course']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="fas fa-folder-plus"></i>
+      <span>Add Video</span>
+  </a>
+    <a
+      class="menu-item"
+      [routerLink]="['/watch']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="fas fa-video"> </i>
+      <span>Watch Video</span>
+</a>
+  </ul>
 </nav>

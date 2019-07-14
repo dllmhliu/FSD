@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { SidemenuComponent } from './shared';
+//import { SidemenuComponent } from './shared';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,10 @@ import { SidemenuComponent } from './shared';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  @ViewChild(SidemenuComponent, { static: true }) sidemenuComponent;
-  title = 'smart-player';
+ // @ViewChild(SidemenuComponent, { static: true }) sidemenuComponent;
+  title = 'assignment2';
 
-  handleToggleSideMenu() {
-    this.sidemenuComponent.toggle();
-  }
+  // handleToggleSideMenu() {
+  //   this.sidemenuComponent.toggle();
+  // }
 }

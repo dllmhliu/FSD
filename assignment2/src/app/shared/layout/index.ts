@@ -1,2 +1,2 @@
 export * from './header.component';
-export * from './sidemenu.component';
+//export * from './sidemenu.component';
