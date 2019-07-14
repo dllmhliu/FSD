@@ -7,6 +7,7 @@ import { Component, ViewChild, ElementRef, Output, EventEmitter } from '@angular
 })
 export class PlayerComponent {
   @ViewChild('video', { static: true }) videoRef: ElementRef;
+  @ViewChild('progressBar', {static: false}) progressBar: ElementRef;
   @Output() videoTimeUpdated = new EventEmitter();
   @Output() videoEnded = new EventEmitter();
 

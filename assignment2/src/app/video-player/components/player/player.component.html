@@ -1,4 +1,9 @@
+<div id='video-player'>
 <video #video (timeupdate)="handleTimeupdate($event)" (ended)="handleVideoEnded()">
   <source src="" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
+<div class="progress">
+    <div #progressBar class="progress-bar bg-dark progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+ </div>
+ </div>

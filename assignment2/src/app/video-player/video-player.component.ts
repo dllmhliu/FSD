@@ -41,13 +41,14 @@ export class VideoPlayerComponent implements OnInit {
   handleTimeUpdate() {
     // update progress bar
     const video = this.video;
+    // Work out how much of the media has played via the duration and currentTime parameters
+    let percentage = Math.floor((100 / this.video.duration) * this.video.currentTime);
     if (video.duration) {
-      this.ratio = +((video.currentTime * 1.0) / video.duration).toFixed(2);
+      this.playerComponent.progressBar.nativeElement.style.width = percentage + '%';
+      this.playerComponent.progressBar.nativeElement.innerHTML = percentage + '% played';
     } else {
-      this.ratio = 0;
     }
   }
-
   handleVideoEnded() {
     this.controlsComponent.stop();
   }
