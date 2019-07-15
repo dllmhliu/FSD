@@ -3,6 +3,7 @@ import { PlayerComponent } from './components/player';
 import { ControlsComponent } from './components/controls';
 import { CourseService } from 'src/app/core/services';
 import { Course } from 'src/app/core/models';
+import { CourseComponent } from 'src/app/course';
 
 const VOTE_UP = 'up';
 const VOTE_DOWN = 'down';
@@ -42,12 +43,9 @@ export class VideoPlayerComponent implements OnInit {
     // update progress bar
     const video = this.video;
     // Work out how much of the media has played via the duration and currentTime parameters
-    let percentage = Math.floor((100 / this.video.duration) * this.video.currentTime);
-    if (video.duration) {
+    const percentage = Math.floor((100 / this.video.duration) * this.video.currentTime);
       this.playerComponent.progressBar.nativeElement.style.width = percentage + '%';
       this.playerComponent.progressBar.nativeElement.innerHTML = percentage + '% played';
-    } else {
-    }
   }
   handleVideoEnded() {
     this.controlsComponent.stop();
@@ -87,6 +85,18 @@ export class VideoPlayerComponent implements OnInit {
     this.video.muted = !muted;
   }
 
+  updateLike(cid, course) {
+    this.courseService.updateCourselike(cid, course).subscribe(
+      res => {
+        const idx = this.courses.findIndex(c => c.id === cid);
+        const course1 = this.courses[idx];
+        this.courses.splice(idx, 1, { ...course1,  id:cid});
+      },
+      error => {
+        console.error(error);
+      }
+    );
+  }
   // get value from localStorage
   _getItem(key, defaultValue) {
     return +localStorage.getItem(key) || defaultValue;
@@ -94,20 +104,26 @@ export class VideoPlayerComponent implements OnInit {
 
   _displayVoteInfo() {
     let key = `${VOTE_UP}@${this.currentCourse.id}`;
-    this.likes = this._getItem(key, 0);
+    this.likes = this.currentCourse.likes;
 
     key = `${VOTE_DOWN}@${this.currentCourse.id}`;
-    this.unlikes = this._getItem(key, 0);
+    this.unlikes = this.currentCourse.unlike;
   }
 
   vote(type: string) {
     if (this.currentCourse) {
       let key = type === 'up' ? VOTE_UP : VOTE_DOWN;
       key = `${key}@${this.currentCourse.id}`;
-      const current = this._getItem(key, 0);
-      localStorage.setItem(key, current + 1);
-
-      this._displayVoteInfo();
+      this.likes = this.currentCourse.likes;
+      this.unlikes = this.currentCourse.unlike;
+      if ( type === 'up' ) {
+        this.likes = this.currentCourse.likes + 1;
+      } else {
+        this.unlikes = this.currentCourse.unlike + 1;
+      }
+      this.currentCourse.likes = this.likes;
+      this.currentCourse.unlike = this.unlikes;
+      this.updateLike(this.currentCourse.id,this.currentCourse);
     }
   }
 

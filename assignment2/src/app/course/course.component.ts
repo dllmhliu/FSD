@@ -57,8 +57,12 @@ export class CourseComponent implements OnInit {
       id: Date.now(),
       title,
       url,
-      duration: '',
+      likes : 0,
+      unlike : 0,
+      status: 'added',
       approved: false,
+      currentStatus : 'stoped',
+      exitplayprogress : 0,
     };
 
     this.courseService.saveCourse(course).subscribe(
@@ -101,7 +105,7 @@ export class CourseComponent implements OnInit {
       f => f
     );
   }
-
+  
   delete(content, cid) {
     this.modalService.open(content, { centered: true }).result.then(
       _ => {

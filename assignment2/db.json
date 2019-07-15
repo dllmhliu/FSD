@@ -1,46 +1,48 @@
 {
   "courses": [
     {
-      "id": 0,
-      "title": "Introduction to HTML5",
-      "url": "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-      "duration": "0:13",
-      "approved": true
-    },
-    {
       "id": 1,
-      "title": "Introduction to Styling with CSS3",
-      "url": "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1280_10MG.mp4",
-      "duration": "0:18",
-      "approved": false
+      "title": "Sadhguru and Physics",
+      "url": "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+      "status": "added",
+      "approved": true,
+      "likes": 22,
+      "unlike": 4,
+      "currentStatus": "playing",
+      "exitplayprogress": 30
     },
     {
       "id": 2,
-      "title": "Introduction to Bootstrap 4",
-      "url": "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-      "duration": "0:13",
-      "approved": true
+      "title": "Angular 6 Tutorial",
+      "url": "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1280_10MG.mp4",
+      "status": "added",
+      "approved": true,
+      "likes": 0,
+      "unlike": 0,
+      "currentStatus": "paused",
+      "exitplayprogress": 0
     },
     {
       "id": 3,
-      "title": "Learn to create website with HTML5, CSS3 and Bootstrap4",
-      "url": "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1280_10MG.mp4",
-      "duration": "0:18",
-      "approved": true
+      "title": "Nikon P900 83X Zoom",
+      "url": "https://raw.githubusercontent.com/intel-iot-devkit/sample-videos/master/fruit-and-vegetable-detection.mp4",
+      "status": "added",
+      "approved": true,
+      "likes": 10,
+      "unlike": 1,
+      "currentStatus": "paused",
+      "exitplayprogress": 80
     },
     {
       "id": 4,
-      "title": "Introduction to Javascript",
-      "url": "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-      "duration": "0:13",
-      "approved": true
-    },
-    {
-      "id": 5,
-      "title": "MiG-31: The Near-Space Plane. ",
-      "url": "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-      "duration": "0:13",
-      "approved": true
+      "title": "Understanding Javascript",
+      "url": "http://techslides.com/demos/sample-videos/small.mp4",
+      "status": "edited",
+      "approved": true,
+      "likes": 25,
+      "unlike": 5,
+      "currentStatus": "stopped",
+      "exitplayprogress": 80
     }
   ]
 }

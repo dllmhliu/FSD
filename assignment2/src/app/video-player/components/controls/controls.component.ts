@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef, Renderer2, Input } from '@angular/core';
-
 const PLAYING = 'playing';
 const PAUSED = 'paused';
 const STOPPED = 'stopped';
@@ -10,6 +9,7 @@ const STOPPED = 'stopped';
   styleUrls: ['./controls.component.css']
 })
 export class ControlsComponent implements OnInit {
+  
   @Input() muted = false;
   @Input() likes = 0;
   @Input() unlikes = 0;
