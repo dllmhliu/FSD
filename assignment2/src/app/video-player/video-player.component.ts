@@ -42,15 +42,19 @@ export class VideoPlayerComponent implements OnInit {
   handleTimeUpdate() {
     // update progress bar
     const video = this.video;
+    if(video.pause){
+      //this.video.currentTime = this.currentCourse.exitplayprogress === 0 ? 0.1 : this.currentCourse.exitplayprogress/100 * this.video.duration + this.video.currentTime;
+    }
+    
     // Work out how much of the media has played via the duration and currentTime parameters
     const percentage = Math.floor((100 / this.video.duration) * this.video.currentTime);
-      this.playerComponent.progressBar.nativeElement.style.width = percentage + '%';
-      this.playerComponent.progressBar.nativeElement.innerHTML = percentage + '% played';
+		//this.currentCourse.exitplayprogress = percentage;
+    this.playerComponent.progressBar.nativeElement.style.width = percentage + '%';
+    this.playerComponent.progressBar.nativeElement.innerHTML = percentage + '% played';
   }
   handleVideoEnded() {
     this.controlsComponent.stop();
   }
-
   // control's events
   play() {
     if (this.currentCourse) {
@@ -98,9 +102,9 @@ export class VideoPlayerComponent implements OnInit {
     );
   }
   // get value from localStorage
-  _getItem(key, defaultValue) {
-    return +localStorage.getItem(key) || defaultValue;
-  }
+  // _getItem(key, defaultValue) {
+  //   return +localStorage.getItem(key) || defaultValue;
+  // }
 
   _displayVoteInfo() {
     let key = `${VOTE_UP}@${this.currentCourse.id}`;
@@ -112,8 +116,8 @@ export class VideoPlayerComponent implements OnInit {
 
   vote(type: string) {
     if (this.currentCourse) {
-      let key = type === 'up' ? VOTE_UP : VOTE_DOWN;
-      key = `${key}@${this.currentCourse.id}`;
+      // let key = type === 'up' ? VOTE_UP : VOTE_DOWN;
+      // key = `${key}@${this.currentCourse.id}`;
       this.likes = this.currentCourse.likes;
       this.unlikes = this.currentCourse.unlike;
       if ( type === 'up' ) {
@@ -131,7 +135,7 @@ export class VideoPlayerComponent implements OnInit {
   handleCourseSelected(course: Course) {
     this.currentCourse = course;
     this.video.src = this.currentCourse.url;
-    this.controlsComponent.play();
+    //this.controlsComponent.play();
+    this.controlsComponent.pause();
     this._displayVoteInfo();
-  }
-}
+    }}
