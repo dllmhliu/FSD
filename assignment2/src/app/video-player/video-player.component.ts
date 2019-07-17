@@ -42,15 +42,28 @@ export class VideoPlayerComponent implements OnInit {
   handleTimeUpdate() {
     // update progress bar
     const video = this.video;
-    if(video.pause){
       //this.video.currentTime = this.currentCourse.exitplayprogress === 0 ? 0.1 : this.currentCourse.exitplayprogress/100 * this.video.duration + this.video.currentTime;
-    }
-    
+
+    if (!video.paused) {
     // Work out how much of the media has played via the duration and currentTime parameters
     const percentage = Math.floor((100 / this.video.duration) * this.video.currentTime);
 		//this.currentCourse.exitplayprogress = percentage;
     this.playerComponent.progressBar.nativeElement.style.width = percentage + '%';
     this.playerComponent.progressBar.nativeElement.innerHTML = percentage + '% played';
+    this.currentCourse.exitplayprogress = percentage === null ? 0 : percentage;
+    // this.courseService.updateCourselike(this.currentCourse.id, this.currentCourse).subscribe(
+    //   res => {
+    //     const idx = this.courses.findIndex(c => c.id === this.currentCourse.id);
+    //     const course1 = this.courses[idx];
+    //     // course1.exitplayprogress = course1.exitplayprogress === null ? 0 : 0 ;
+    //     // this.currentCourse.exitplayprogress = this.currentCourse.exitplayprogress === null ? 0 : 0;
+    //     this.courses.splice(idx, 1, { ...course1,  id : this.currentCourse.id});
+    //   },
+    //   error => {
+    //     console.error(error);
+    //   }
+    // );
+    }
   }
   handleVideoEnded() {
     this.controlsComponent.stop();
@@ -59,6 +72,7 @@ export class VideoPlayerComponent implements OnInit {
   play() {
     if (this.currentCourse) {
       this.video.play();
+      this.video.currentTime = this.currentCourse.exitplayprogress / 100 * this.video.duration;
     }
   }
 
@@ -127,7 +141,7 @@ export class VideoPlayerComponent implements OnInit {
       }
       this.currentCourse.likes = this.likes;
       this.currentCourse.unlike = this.unlikes;
-      this.updateLike(this.currentCourse.id,this.currentCourse);
+      this.updateLike(this.currentCourse.id, this.currentCourse);
     }
   }
 
@@ -138,4 +152,10 @@ export class VideoPlayerComponent implements OnInit {
     //this.controlsComponent.play();
     this.controlsComponent.pause();
     this._displayVoteInfo();
+    // const ce = this.currentCourse.exitplayprogress;
+    // const pro = 'pro';
+    // localStorage.setItem(pro, ce.toString());
+    // localStorage.getItem(pro);
+    this.playerComponent.progressBar.nativeElement.style.width = this.currentCourse.exitplayprogress + '%';
+    this.playerComponent.progressBar.nativeElement.innerHTML = this.currentCourse.exitplayprogress + '% played';
     }}
