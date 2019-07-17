@@ -1,9 +1,12 @@
-# Run the application
-## win + R -> cmd -> cd FSD/assignment2
+# Run the application:
+## 1. win + R -> cmd -> cd FSD/assignment2
 ## json-server --watch db.json
-## win + R -> cmd -> cd FSD/assignment2
+![run1 screenshot](./img_20190717134419.png)
+## 2. win + R -> cmd -> cd FSD/assignment2
 ## ng serve
-
+![run2 screenshot](./img_20190717134428.png)
+## 3. open the url http://localhost:4200
+![run3 screenshot](./img_20190717134832.png)
 
 
 # SmartPlayer
