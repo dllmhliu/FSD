@@ -10,7 +10,7 @@ class AddVideo extends React.Component {
           playlist: [],
           title: "",
           url: "",
-          approve:""
+          approve:false
         };
     }
 
@@ -54,7 +54,7 @@ class AddVideo extends React.Component {
 
     addVideo() {
         let count = this.state.playlist.length;
-        let postData = {"id": count+1, "title": this.state.title, "url": this.state.url};
+        let postData = {"id": count+1, "title": this.state.title, "url": this.state.url, "approved": false};
         var result = fetch('http://localhost:3000/playlist/',{
             method:'POST',
             headers:{

@@ -26,7 +26,7 @@ class VideoPlayer extends React.Component {
         <div className="container">
       <div className="row">
         <div className="col-lg-9" style={{ textAlign: 'center' }}>
-          <h1>VIDEO PLAYER BY REACT JS</h1>
+          <h1>Video Player By React JS</h1>
         </div>
       </div>
       <div className="row">
