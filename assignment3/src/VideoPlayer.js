@@ -2,6 +2,7 @@ import React from 'react';
 import Player from './Player';
 import Controls from './Controls';
 import Playlist from './Playlist';
+import AddVideo from './AddVideo';
 
 class VideoPlayer extends React.Component {
 
@@ -29,12 +30,17 @@ class VideoPlayer extends React.Component {
         </div>
       </div>
       <div className="row">
-        <div className="col-md-8">
+        <div className="col-lg-7">
           <Player ref={this.refPlayer} onTimeUpdate={(value)=>{this.onTimeUpdateHandler(value)}}></Player>
           <Controls player = {this.refPlayer} progressValue = {this.state.progressValue} currentVideoId = {this.state.currentVideoId}></Controls>
+        <p></p>
+        <p></p>
         </div>
-        <div id="landscapePlayList" >
+        <div className="col-lg-5" id="landscapePlayList" >
           <Playlist player = {this.refPlayer} playlistClick={(value)=>{this.playlistClickHandler(value)}}></Playlist>
+        </div>
+        <div>
+        <AddVideo player = {this.refPlayer} playlistClick={(value)=>{this.playlistClickHandler(value)}}></AddVideo>
         </div>
       </div>
     </div>

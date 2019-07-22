@@ -48,24 +48,25 @@ class Controls extends React.Component {
         return (
             <div>
                 <div>
-                    <progress id="progressBar" ref="progressBarRef" value={this.props.progressValue} max="100" style={{ width: '150%' }}></progress>
+                    <progress id="progressBar" ref="progressBarRef" value={this.props.progressValue} max="100" style={{ width: '100%' }}></progress>
                 </div>
-                <div style={{ width: '150%' }}>
-                    <font size="5">
+                <div style={{ width: '100%' }}>
+                    <font size="3">
                         <i className="glyphicon glyphicon-play" id="play" style={{cursor: this.state.cursor==='play'?'':'pointer'}} onClick={() => { this.videoControl('play') }}
-                        ></i> Play 
+                        ></i> Play &nbsp;&nbsp;
                         <i className="glyphicon glyphicon-pause" id="pause" style={{cursor: this.state.cursor==='pause'?'':'pointer'}} onClick={() => {this.videoControl('pause')}}
-                        ></i> Pause 
+                        ></i> Pause &nbsp;&nbsp;
                         <i className="glyphicon glyphicon-plus" id="plus" style={{cursor:'pointer'}} onClick={() => {this.videoControl('plus')}}
-                        ></i> Up 
+                        ></i> Up &nbsp;&nbsp;
                         <i className="glyphicon glyphicon-minus" id="minus" style={{cursor:'pointer'}} onClick={() => {this.videoControl('minus')}}
-                        ></i> Down 
+                        ></i> Down &nbsp;&nbsp;
                         <i className="glyphicon glyphicon-refresh" id="refresh" style={{cursor:'pointer'}} onClick={() => {this.videoControl('reload')}}
-                        ></i> Replay 
+                        ></i> Replay &nbsp;&nbsp;
                         <i className="glyphicon glyphicon-headphones" id="mute" style={{cursor:'pointer'}} onClick={() => {this.videoControl('mute')}}
-                        ></i> Mute/Unmute 
+                        ></i> Mute/Unmute &nbsp;&nbsp;
                         <i className="glyphicon glyphicon-thumbs-up" id="up" onClick={() => {this.videoControl('up')}}
                             style={{ color: 'green',cursor:'pointer' }}>Like<span id="up">{this.state.vlike.like}</span></i>
+                            &nbsp;&nbsp;
                         <i className="glyphicon glyphicon-thumbs-down" id="down" onClick={() => {this.videoControl('down')}}
                             style={{ color: 'red',cursor:'pointer' }}>Unlike<span id="down">{this.state.vlike.unlike}</span></i>
                     </font>

@@ -21,7 +21,8 @@ class Player extends React.Component {
     playlistClick = (id, url) => {
         console.log("videoPlayerRef", this.videoPlayerRef);
         this.videoPlayerRef.current.src = url;
-        this.videoPlayerRef.current.play();
+        //this.videoPlayerRef.current.play();
+        this.videoPlayerRef.current.pause();
     }
     
     videoControl = (controlFlag) => {
@@ -52,7 +53,7 @@ class Player extends React.Component {
     render() {
         return (
             <div>
-                <video id="videoPlayer" ref={this.videoPlayerRef} onTimeUpdate={()=>this.onTimeUpdate()} width="150%" height="120%" >
+                <video id="videoPlayer" ref={this.videoPlayerRef} onTimeUpdate={()=>this.onTimeUpdate()} width="100%" height="90%" >
                     <source
                         src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" />
                 </video>
