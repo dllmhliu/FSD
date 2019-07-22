@@ -48,7 +48,7 @@ class Controls extends React.Component {
         return (
             <div>
                 <div>
-                    <progress id="progressBar" ref="progressBarRef" value={this.props.progressValue} max="100" style={{ width: '100%' }}></progress>
+                    <progress id="progressBar" ref="progressBarRef" value={this.props.progressValue} max="100" style={{ width: '150%' }}></progress>
                 </div>
                 <div style={{ width: '150%' }}>
                     <font size="5">

@@ -52,7 +52,7 @@ class Player extends React.Component {
     render() {
         return (
             <div>
-                <video id="videoPlayer" ref={this.videoPlayerRef} onTimeUpdate={()=>this.onTimeUpdate()} width="120%" height="100%" >
+                <video id="videoPlayer" ref={this.videoPlayerRef} onTimeUpdate={()=>this.onTimeUpdate()} width="150%" height="120%" >
                     <source
                         src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" />
                 </video>

@@ -2,68 +2,47 @@
   "playlist": [
     {
       "id": 1,
-      "Title": "国际田联比赛",
-      "URL": "https://video.pearvideo.com/mp4/adshort/20190706/cont-1574279-14096750_adpkg-ad_hd.mp4"
+      "title": "Sadhguru and Physics",
+      "url": "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+      "status": "added",
+      "approved": true,
+      "likes": 22,
+      "unlike": 4,
+      "currentStatus": "playing",
+      "exitplayprogress": 30
     },
     {
       "id": 2,
-      "Title": "梅西怒了！染红后拒绝领奖炮轰足协",
-      "URL": "https://video.pearvideo.com/mp4/adshort/20190707/cont-1574456-14098673_adpkg-ad_hd.mp4"
+      "title": "Angular 6 Tutorial",
+      "url": "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1280_10MG.mp4",
+      "status": "added",
+      "approved": true,
+      "likes": 0,
+      "unlike": 0,
+      "currentStatus": "paused",
+      "exitplayprogress": 0
     },
     {
       "id": 3,
-      "Title": "瓶盖挑战风靡！斯坦森用脚扫开瓶盖",
-      "URL": "https://video.pearvideo.com/mp4/adshort/20190702/cont-1572578-14079299_adpkg-ad_hd.mp4"
+      "title": "Nikon P900 83X Zoom",
+      "url": "https://raw.githubusercontent.com/intel-iot-devkit/sample-videos/master/fruit-and-vegetable-detection.mp4",
+      "status": "added",
+      "approved": true,
+      "likes": 10,
+      "unlike": 1,
+      "currentStatus": "paused",
+      "exitplayprogress": 80
     },
     {
       "id": 4,
-      "Title": "加州7.1级地震，NBA夏季联赛被中断",
-      "URL": "https://video.pearvideo.com/mp4/adshort/20190706/cont-1574299-14096961_adpkg-ad_hd.mp4"
-    },
-    {
-      "id": 5,
-      "Title": "加州7.1级地震，主播直播中躲桌底",
-      "URL": "https://video.pearvideo.com/mp4/adshort/20190706/cont-1574302-14096982_adpkg-ad_hd.mp4"
-    },
-    {
-      "id": 6,
-      "Title": "懵！长跑赛还剩一圈，他已庆祝胜利",
-      "URL": "https://video.pearvideo.com/mp4/adshort/20190707/cont-1574479-14098890_adpkg-ad_hd.mp4"
-    },
-    {
-      "id": 7,
-      "Title": "qq",
-      "URL": "ww"
-    },
-    {
-      "id": 8,
-      "Title": "dd",
-      "URL": "aa"
-    },
-    {
-      "id": 9,
-      "Title": "dd",
-      "URL": ""
-    },
-    {
-      "id": 10,
-      "Title": "1",
-      "URL": ""
-    },
-    {
-      "id": 11,
-      "Title": "123",
-      "URL": "123"
-    },
-    {
-      "id": 12,
-      "Title": "11",
-      "URL": ""
-    },
-    {
-      "id": 13,
-      "Title": 123,
-      "URL": "22"
+      "title": "Understanding Javascript",
+      "url": "http://techslides.com/demos/sample-videos/small.mp4",
+      "status": "edited",
+      "approved": true,
+      "likes": 25,
+      "unlike": 5,
+      "currentStatus": "stopped",
+      "exitplayprogress": 80
     }
   ]
 }

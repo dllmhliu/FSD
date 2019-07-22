@@ -50,7 +50,7 @@ class Playlist extends React.Component {
     }
 
     playlistClick(play) {
-        this.props.player.current.playlistClick(play.id, play.URL);
+        this.props.player.current.playlistClick(play.id, play.url);
         this.props.playlistClick(play.id);
     }
 
@@ -115,11 +115,12 @@ class Playlist extends React.Component {
         var playlistHtml = [];
         
         for (let play of this.state.playlist) {
-            playlistHtml.push(<li key={play.id}><a href="javascript:void(0)" onClick={()=>this.playlistClick(play)}> {play.Title}</a>&nbsp;&nbsp;<a href="javascript:void(0)" onClick={()=>this.playlistDelete(play)} style={{color:'blueviolet'}}>Delete</a></li>);
+            playlistHtml.push(<li key={play.id}><a href="javascript:void(0)" onClick={()=>this.playlistClick(play)}> {play.title}</a>&nbsp;&nbsp;<a href="javascript:void(0)" onClick={()=>this.playlistDelete(play)} style={{color:'blueviolet'}}>Delete</a></li>);
         }
 
         return (
             <div>
+                <font size="5">
                 <div>
                     <label>Title:</label><input type="input" id="title" onChange={this.inputChangeHandler.bind(this)} defaultValue={this.state.title}/>
                     <label>URL:</label><input type="input" id="url" onChange={this.inputChangeHandler.bind(this)} defaultValue={this.state.url}/>&nbsp;&nbsp;
@@ -128,6 +129,7 @@ class Playlist extends React.Component {
                 <ul id="playList">
                     {playlistHtml}
                 </ul>
+                </font>
             </div>
         );
     }

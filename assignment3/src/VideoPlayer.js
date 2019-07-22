@@ -29,11 +29,11 @@ class VideoPlayer extends React.Component {
         </div>
       </div>
       <div className="row">
-        <div className="col-lg-7">
+        <div className="col-md-8">
           <Player ref={this.refPlayer} onTimeUpdate={(value)=>{this.onTimeUpdateHandler(value)}}></Player>
           <Controls player = {this.refPlayer} progressValue = {this.state.progressValue} currentVideoId = {this.state.currentVideoId}></Controls>
         </div>
-        <div className="col-lg-5" id="landscapePlayList" >
+        <div id="landscapePlayList" >
           <Playlist player = {this.refPlayer} playlistClick={(value)=>{this.playlistClickHandler(value)}}></Playlist>
         </div>
       </div>
