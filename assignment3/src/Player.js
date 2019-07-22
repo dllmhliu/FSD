@@ -52,7 +52,7 @@ class Player extends React.Component {
     render() {
         return (
             <div>
-                <video id="videoPlayer" ref={this.videoPlayerRef} onTimeUpdate={()=>this.onTimeUpdate()} width="90%" height="80%" controls="controls">
+                <video id="videoPlayer" ref={this.videoPlayerRef} onTimeUpdate={()=>this.onTimeUpdate()} width="120%" height="100%" >
                     <source
                         src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" />
                 </video>
@@ -60,6 +60,7 @@ class Player extends React.Component {
             </div>
         );
         //https://video.pearvideo.com/mp4/adshort/20190706/cont-1574279-14096750_adpkg-ad_hd.mp4
+        //controls="controls"
     }
 }
 
