@@ -74,6 +74,7 @@ class AddVideo extends React.Component {
             });
           });
         console.log(this.state.url);
+        window.location.reload(true);
     }
 
     inputChangeHandler(e) {
@@ -169,7 +170,7 @@ class AddVideo extends React.Component {
         var playlistHtml = [];
         let i=1;
         for (let play of this.state.playlist) {
-            playlistHtml.push(<tr key={play.id}><td>{i}&nbsp;&nbsp;</td><td>{play.title}&nbsp;&nbsp;</td><td>{play.url}&nbsp;&nbsp;</td><td><a href="javascript:void(0)" onClick={()=>this.playlistEdit(play)} style={{color:'blueviolet'}}>Edit</a>&nbsp;&nbsp; </td><td><a href="javascript:void(0)" onClick={()=>this.playlistDelete(play)} style={{color:'blueviolet'}}>Delete</a>&nbsp;&nbsp;</td><td> <a id="approve" href="javascript:void(0)" onClick={()=>this.playlistApprove(play)} style={{color:'blueviolet'}}>Approve</a></td></tr>);
+            playlistHtml.push(<tr key={play.id}><td>{i}&nbsp;&nbsp;</td><td>{play.title}&nbsp;&nbsp;</td><td>{play.url}&nbsp;&nbsp;</td><td><button onClick={()=>this.playlistEdit(play)} style={{color:'blueviolet'}}>Edit</button>&nbsp;&nbsp; </td><td><button onClick={()=>this.playlistDelete(play)} style={{color:'blueviolet'}}>Delete</button>&nbsp;&nbsp;</td><td> <button class="btn btn-success" onClick={()=>this.playlistApprove(play)} style={{color:'blueviolet'} } disabled= {play.approved}>Approve</button></td></tr>);
             i++;
         }
         return (

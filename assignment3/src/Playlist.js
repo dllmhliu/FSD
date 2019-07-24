@@ -22,7 +22,7 @@ class Playlist extends React.Component {
     }
 
     getPlaylist() {
-        var result = fetch('http://localhost:3000/playlist',{
+        var result = fetch('http://localhost:3000/playlist?approved=true',{
             method:'GET',
             headers:{
               'Content-Type':'application/json;charset=UTF-8'
@@ -32,13 +32,12 @@ class Playlist extends React.Component {
           });
         
           result.then(res => {
-    
               res.json().then(data => {
                 console.log("data:", data);
                 if (data != null) {
                     this.setState({playlist: data});
                     for (let play of data) {
-                        console.log("play:", play);
+                            console.log("play:", play);
                     }
                 }
             });
