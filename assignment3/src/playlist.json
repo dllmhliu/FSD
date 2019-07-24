@@ -1,17 +1,6 @@
 {
   "playlist": [
     {
-      "id": 1,
-      "title": "Sadhguru and Physics",
-      "url": "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-      "status": "added",
-      "approved": true,
-      "likes": 22,
-      "unlike": 4,
-      "currentStatus": "playing",
-      "exitplayprogress": 30
-    },
-    {
       "id": 2,
       "title": "Angular 6 Tutorial",
       "url": "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1280_10MG.mp4",
@@ -43,6 +32,18 @@
       "unlike": 5,
       "currentStatus": "stopped",
       "exitplayprogress": 80
+    },
+    {
+      "id": 1563945626182,
+      "title": "fff",
+      "url": "fff",
+      "approved": false
+    },
+    {
+      "id": 1563945718404,
+      "title": "kk",
+      "url": "kk",
+      "approved": false
     }
   ]
 }
