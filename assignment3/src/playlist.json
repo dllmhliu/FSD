@@ -27,7 +27,7 @@
       "title": "Nikon P900 83X Zoom",
       "url": "https://raw.githubusercontent.com/intel-iot-devkit/sample-videos/master/fruit-and-vegetable-detection.mp4",
       "status": "added",
-      "approved": false,
+      "approved": true,
       "likes": 10,
       "unlike": 1,
       "currentStatus": "paused",
