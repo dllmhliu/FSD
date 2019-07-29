@@ -1,0 +1,10 @@
+com\fsd\salary\model\Salary.class
+com\fsd\salary\utils\Increment.class
+com\fsd\salary\utils\Prediction$PredictionFunc.class
+com\fsd\salary\FsdSalaryApplication.class
+com\fsd\salary\utils\Deduction$DecreaseFunc.class
+com\fsd\salary\utils\Prediction.class
+com\fsd\salary\utils\Deduction.class
+com\fsd\salary\utils\Increment$IncreaseFunc.class
+com\fsd\salary\model\RspModel.class
+com\fsd\salary\controller\SalaryController.class
