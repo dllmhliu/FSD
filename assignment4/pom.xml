@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fsd</groupId>
-	<artifactId>fsd-salary</artifactId>
+	<artifactId>fsd-assignment4-salary</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>fsd-salary</name>
+	<name>fsd-assignment4-salary</name>
 	<description>Salary Income Predictor project for Spring Boot</description>
 
 	<properties>
