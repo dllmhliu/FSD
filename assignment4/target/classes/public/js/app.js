@@ -185,8 +185,7 @@
                 return{
                     fields:["salary","inquota","count","amount","year"]}}
         }
-         ,b=p,v=a("2877"),m=Object(v["a"])(b,d,f,!1,null,null,null),y=m.exports,
-         h=function(){
+         ,b=p,v=a("2877"),m=Object(v["a"])(b,d,f,!1,null,null,null),y=m.exports,h=function(){
              var t=this,e=t.$createElement,a=t._self._c||e;
              return a(
                     "div",
