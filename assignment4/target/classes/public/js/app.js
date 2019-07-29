@@ -61,7 +61,8 @@
     0:function(t,e,a){t.exports=a("56d7")},
     "034f":function(t,e,a){"use strict";var r=a("64a9"),n=a.n(r);n.a},
     "4a20":function(t,e,a){},
-    "56d7":function(t,e,a){
+    "56d7":function(t,e,a)
+    {
         "use strict";
         a.r(e);
         a("744f"),a("6c7b"),a("7514"),a("20d6"),a("1c4c"),a("6762"),a("cadf"),a("e804"),a("55dd"),a("d04f"),a("c8ce"),a("217b"),a("7f7f"),a("f400"),a("7f25"),a("536b"),a("d9ab"),a("f9ab"),a("32d7"),a("25c9"),a("9f3c"),a("042e"),a("c7c6"),a("f4ff"),a("049f"),a("7872"),a("a69f"),a("0b21"),a("6c1a"),a("c7c62"),a("84b4"),a("c5f6"),a("2e37"),a("fca0"),a("7cdf"),a("ee1d"),a("b1b1"),a("87f3"),a("9278"),a("5df2"),a("04ff"),a("f751"),a("4504"),a("fee7"),a("ffc1"),a("0d6d"),a("9986"),a("8e6e"),a("25db"),a("e4f7"),a("b9a1"),a("64d5"),a("9aea"),a("db97"),a("66c8"),a("57f0"),a("165b"),a("456d"),a("cf6a"),a("fd24"),a("8615"),a("551c"),a("097d"),a("df1b"),a("2397"),a("88ca"),a("ba16"),a("d185"),a("ebde"),a("2d34"),a("f6b3"),a("2251"),a("c698"),a("a19f"),a("9253"),a("9275"),a("3b2b"),a("3846"),a("4917"),a("a481"),a("28a5"),a("386d"),a("6b54"),a("4f7f"),a("8a81"),a("ac4d"),a("8449"),a("9c86"),a("fa83"),a("48c0"),a("a032"),a("aef6"),a("d263"),a("6c37"),a("9ec8"),a("5695"),a("2fdb"),a("d0b0"),a("5df3"),a("b54a"),a("f576"),a("ed50"),a("788d"),a("14b9"),a("f386"),a("f559"),a("1448"),a("673e"),a("242a"),a("c66f"),a("b05c"),a("34ef"),a("6aa2"),a("15ac"),a("af56"),a("b6e4"),a("9c29"),a("63d9"),a("4dda"),a("10ad"),a("c02b"),a("4795"),a("130f"),a("ac6a"),a("96cf"),a("0cdd");
@@ -160,13 +161,101 @@
                 ],1
             )
         },
-            u=[],s=a("bc3a"),c=a.n(s),d=function(){var t=this,e=t.$createElement,a=t._self._c||e;return a("div",[t._m(0),t.inreport?a("b-table",{attrs:{striped:"",hover:"",items:t.inreport,fields:t.fields}}):t._e()],1)},f=[function(){var t=this,e=t.$createElement,a=t._self._c||e;
-                return a("label",[a("strong",[t._v("Increment Report")])])}],p={name:"Inreport",props:{inreport:Array},
-                data:function(){return{fields:["salary","inquota","count","amount","year"]}}},b=p,v=a("2877"),m=Object(v["a"])(b,d,f,!1,null,null,null),y=m.exports,h=function(){var t=this,e=t.$createElement,a=t._self._c||e;return a("div",[t._m(0),t.dereport?a("b-table",{attrs:{striped:"",hover:"",items:t.dereport,fields:t.fields}}):t._e()],1)},_=[function(){var t=this,e=t.$createElement,a=t._self._c||e;return a("label",[a("strong",[t._v("Deduction Report")])])}],q={name:"Dereport",props:{dereport:Array},data:function(){return{fields:["salary","dequota","count","amount","year"]}}},x=q,S=Object(v["a"])(x,h,_,!1,null,null,null),g=S.exports,w=function(){var t=this,e=t.$createElement,a=t._self._c||e;
-                return a("div",[t._m(0),t.predict?a("b-table",{attrs:{striped:"",hover:"",items:t.predict,fields:t.fields}}):t._e()],1)},O=[function(){var t=this,e=t.$createElement,a=t._self._c||e;return a("label",[a("strong",[t._v("Prediction Report")])])}],j={name:"Predictreport",props:{predict:Array},data:function(){return{fields:["salary","dequota","inquota","amount","year"]}}},I=j,P=Object(v["a"])(I,w,O,!1,null,null,null),k=P.exports,D={name:"Salary",components:{Inreport:y,Dereport:g,Predictreport:k},computed:{salaryState:function(){return this.salary>1},inquotaState:function(){return this.inquota>0},dequotaState:function(){return this.dequota>0}},data:function(){return{salary:"",inquota:"",dequota:"",inreport:[],dereport:[],predict:[],count:null,
-                options:[{value:null,text:"Please select an option"},{value:"3",text:"Quarterly"},{value:"6",text:"Half-Yearly"},{value:"12",text:"Annually"}]}},methods:{querysalary:function(){var t=this;c.a.post("/increase",{salary:this.salary,inquota:this.inquota,dequota:this.dequota,count:this.count}).then(function(e){t.inreport=e.data.data}),
-                c.a.post("/decrease",{salary:this.salary,inquota:this.inquota,
-                    dequota:this.dequota,count:this.count}).then(function(e){t.dereport=e.data.data}),
-                    c.a.post("/predict",{salary:this.salary,inquota:this.inquota,dequota:this.dequota,count:this.count}).then(function(e){t.predict=e.data.data})}}},$=D,E=(a("bfef"),Object(v["a"])($,l,u,!1,null,"14c9d73e",null)),C=E.exports,A={name:"app",components:{Salary:C}},M=A,N=(a("034f"),Object(v["a"])(M,o,i,!1,null,null,null)),T=N.exports;r["default"].config.productionTip=!1,new r["default"]({render:function(t){return t(T)}}).$mount("#app")},"64a9":function(t,e,a){},bfef:function(t,e,a){"use strict";var r=a("4a20"),n=a.n(r);n.a}
-                });
+        u=[],s=a("bc3a"),c=a.n(s),d=function()
+        {
+            var t=this,e=t.$createElement,a=t._self._c||e;
+            return a(
+                    "div",
+                    [t._m(0),t.inreport?a("b-table",{attrs:{striped:"",hover:"",items:t.inreport,fields:t.fields}}):t._e()],
+                    1
+                    )
+        },
+        f=[function()
+        {
+            var t=this,e=t.$createElement,a=t._self._c||e;
+            return a(
+                "label",
+                [a("strong",[t._v("Increment Report")])]
+                )
+        }],
+        p={
+            name:"Inreport",
+            props:{inreport:Array},
+            data:function(){
+                return{
+                    fields:["salary","inquota","count","amount","year"]}}
+        }
+         ,b=p,v=a("2877"),m=Object(v["a"])(b,d,f,!1,null,null,null),y=m.exports,
+         h=function(){
+             var t=this,e=t.$createElement,a=t._self._c||e;
+             return a(
+                    "div",
+                    [t._m(0),t.dereport?a("b-table",{attrs:{striped:"",hover:"",items:t.dereport,fields:t.fields}}):t._e()]
+                    ,1
+                    )
+        },_=[function(){
+            var t=this,e=t.$createElement,a=t._self._c||e;
+            return a(
+                "label",
+                [a("strong",[t._v("Deduction Report")])]
+                )
+            }],
+        q={
+            name:"Dereport",
+            props:{dereport:Array},
+            data:function()
+            {
+                return{fields:["salary","dequota","count","amount","year"]}
+            }
+        },
+        x=q,S=Object(v["a"])(x,h,_,!1,null,null,null),g=S.exports,w=function()
+        {
+            var t=this,e=t.$createElement,a=t._self._c||e;
+            return a("div",[t._m(0),t.predict?a("b-table",{attrs:{striped:"",hover:"",items:t.predict,fields:t.fields}}):t._e()],1)
+        }
+        ,O=[function()
+            {
+                var t=this,e=t.$createElement,a=t._self._c||e;
+                return a("label",[a("strong",[t._v("Prediction Report")])])
+            }]
+        ,j={
+            name:"Predictreport",
+            props:{predict:Array},
+            data:function()
+            {
+                return{fields:["salary","dequota","inquota","amount","year"]}
+            }
+        },
+        I=j,P=Object(v["a"])(I,w,O,!1,null,null,null),k=P.exports,D={
+            name:"Salary",
+            components:{Inreport:y,Dereport:g,Predictreport:k},
+            computed:{salaryState:function(){return this.salary>1},
+            inquotaState:function(){return this.inquota>0},
+            dequotaState:function(){return this.dequota>0}
+            },
+            data:function(){
+                return{salary:"",inquota:"",dequota:"",inreport:[],dereport:[],predict:[],count:null,
+                    options:[
+                        {value:null,text:"Please select an option"},
+                        {value:"3",text:"Quarterly"},
+                        {value:"6",text:"Half-Yearly"},
+                        {value:"12",text:"Annually"}
+                    ]}
+            },
+            methods:{
+                querysalary:function(){
+                    var t=this;
+                    c.a.post("/increase",{salary:this.salary,inquota:this.inquota,dequota:this.dequota,count:this.count}).then(function(e){t.inreport=e.data.data}),
+                    c.a.post("/decrease",{salary:this.salary,inquota:this.inquota,dequota:this.dequota,count:this.count}).then(function(e){t.dereport=e.data.data}),
+                    c.a.post("/predict",{salary:this.salary,inquota:this.inquota,dequota:this.dequota,count:this.count}).then(function(e){t.predict=e.data.data})
+                }
+            }
+        },
+        $=D,E=(a("bfef"),Object(v["a"])($,l,u,!1,null,"14c9d73e",null)),C=E.exports,A={name:"app",components:{Salary:C}},
+        M=A,N=(a("034f"),Object(v["a"])(M,o,i,!1,null,null,null)),T=N.exports;r["default"].config.productionTip=!1,
+        new r["default"]({render:function(t){return t(T)}}).$mount("#app")
+    },
+    "64a9":function(t,e,a){},
+    bfef:function(t,e,a){"use strict";var r=a("4a20"),n=a.n(r);n.a}
+});
     //# sourceMappingURL=app.5a04ca29.js.map
