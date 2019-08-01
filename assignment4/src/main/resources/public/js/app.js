@@ -145,7 +145,7 @@
                         [
                             a("b-col",{attrs:{sm:"8"}}),
                             a("b-col",{staticStyle:{"text-align":"end"},attrs:{sm:"4"}},
-                                [a("b-button",{attrs:{variant:"success"},on:{click:function(e){return t.querysalary()}}},[t._v("Button")])]
+                                [a("b-button",{attrs:{variant:"success"},on:{click:function(e){return t.querysalary()}}},[t._v("Calculate")])]
                             ,1)
                         ],1
                     ),
@@ -186,7 +186,7 @@
                     fields:["salary","inquota","count","amount","year"]}}
         }
          ,b=p,v=a("2877"),m=Object(v["a"])(b,d,f,!1,null,null,null),y=m.exports,h=function(){
-             var t=this,e=t.$createElement,a=t._self._c||e;
+             var t=this,e=t.$createElement,a=t._self._c||e; 
              return a(
                     "div",
                     [t._m(0),t.dereport?a("b-table",{attrs:{striped:"",hover:"",items:t.dereport,fields:t.fields}}):t._e()]
