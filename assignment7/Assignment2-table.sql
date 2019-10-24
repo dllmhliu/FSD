@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
--- 主机:                           localhost
--- 服务器版本:                        8.0.13 - MySQL Community Server - GPL
--- 服务器操作系统:                      Win64
--- HeidiSQL 版本:                  9.5.0.5196
+-- Host:                           localhost
+-- Server version:                        8.0.13 - MySQL Community Server - GPL
+-- Server operating system:                      Win64
+-- HeidiSQL version:                  9.5.0.5196
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -12,11 +12,11 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- 导出 fsd-assignments-07 的数据库结构
-CREATE DATABASE IF NOT EXISTS `fsd-assignments-07` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin */;
-USE `fsd-assignments-07`;
+-- Export database structure of assignment7 
+CREATE DATABASE IF NOT EXISTS `assignment7` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin */;
+USE `assignment7`;
 
--- 导出  表 fsd-assignments-07.relationship 结构
+-- Export table assignment7.relationship structure
 CREATE TABLE IF NOT EXISTS `relationship` (
   `user_one_id` int(11) NOT NULL,
   `user_two_id` int(11) NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `relationship` (
   CONSTRAINT `FK_relationship_users_3` FOREIGN KEY (`action_user_id`) REFERENCES `users` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
--- 正在导出表  fsd-assignments-07.relationship 的数据：~0 rows (大约)
+-- Try to export table assignment7.relationship data
 DELETE FROM `relationship`;
 /*!40000 ALTER TABLE `relationship` DISABLE KEYS */;
 INSERT INTO `relationship` (`user_one_id`, `user_two_id`, `status`, `action_user_id`) VALUES
@@ -53,7 +53,7 @@ INSERT INTO `relationship` (`user_one_id`, `user_two_id`, `status`, `action_user
 	(3, 5, 1, 3);
 /*!40000 ALTER TABLE `relationship` ENABLE KEYS */;
 
--- 导出  表 fsd-assignments-07.users 结构
+-- Export table assignment7.users structure
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(256) COLLATE utf8mb4_bin DEFAULT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
--- 正在导出表  fsd-assignments-07.users 的数据：~0 rows (大约)
+-- try to export table assignment7.users data
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`) VALUES

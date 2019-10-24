@@ -1,3 +1,4 @@
+--Questions
 -- 1.What should be done to make users pair insertion unique i.e. to avoid duplicate user relationship creation?
 Add PRIMARY KEY (`user_one_id`, `user_two_id`)
 -- 2.What will be the insert query to insert a new Friend request sent by user 1 to user 2?
